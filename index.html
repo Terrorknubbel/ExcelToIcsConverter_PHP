@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="images/bbwlogo.png">
+    <title>CSV ICS Converter</title>
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui-theme.css">
+    <link rel="stylesheet" type="text/css" href="css/master.css">
+    <link rel="stylesheet" type="text/css" href="css/input.css">
+
+</head>
+<body onresize="resizeTable()">
+
+    <div id="headline">
+        <div id='titlebox' onclick="window.location.reload(1)" title="Startseite">
+            <span class="big">CSV</span> zu
+            <span class="big">ICS</span>
+        </div>
+
+    </div>
+
+    <div id="upload-wrapper">
+        <input id="drop_zone" type="file" onchange="showFile()">
+    </div>
+
+    <div id="show-text">
+
+    </div>
+
+    <img id="scrollTop" src="images/scrollTop.png"/>
+    <div id="PopUp">
+        <span>X</span>
+        <h1>Fehler beim Konvertieren</h1>
+        <hr>
+        <h2>Es wurde kein korrektes Feld für Datum/Uhrzeit ausgewählt</h2>
+        <h2>Datum dd.mm.yyyy | Uhrzeit hh:mm</h2>
+        <h2>Rechts neben der Suche finden Sie das Drag & Drop Menü</h2>
+
+        <div id='menu_picError'>
+            <img src="images/tags.png"/>
+        </div>
+
+    </div>
+
+    <div id="PopUpBetreffHilfe">
+        <span>X</span>
+        <h1>Die Betreffzeile richtig verwenden</h1>
+        <hr>
+        <h2>Wenn Sie eine Tabellenüberschrift mit #<br>umschließen, wird der jeweilige<br>Eintrag für jeden Betreff übernommen</h2>
+
+        <img src="images/BetreffInfo.png"/>
+       
+
+    </div>
+
+</body>
+<script src="script/jquery-3.2.1.js" charset="utf-8"></script>
+<script src="script/jquery-ui-1.12.1.js" charset="utf-8"></script>
+<script src="script/dataTables.js"></script>
+<script src="script/autocomplete.js"></script>
+<script src="script/main.js" charset="utf-8"></script>
+</html>
+

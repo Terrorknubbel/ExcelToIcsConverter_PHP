@@ -1,0 +1,111 @@
+.button_container {
+    position: absolute;
+    left: calc(50% - 115px);
+    top: 8vw;
+    width: 12vw;
+    height: 6vh;
+    text-align: center;
+    z-index: 2;
+    font-family: 'arial', sans-serif;
+}
+
+#button {
+    outline: none;
+    height: 4vw;
+    text-align: center;
+    width: 12vw;
+    border-radius: 40px;
+    background: #fff;
+    border: 2px solid #ff8d2f;
+    color: #ff8d2f;
+    letter-spacing: 1px;
+    text-shadow: 0;
+    font-size: 1vw;
+    font-weight: bold;
+    cursor: pointer;
+    -webkit-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+    margin-top: 1vw;
+}
+
+#button:hover {
+    color: white;
+    background: #ff8d2f;
+}
+
+#button:active {
+    letter-spacing: 2px;
+}
+
+#button:after {
+    content: "CONVERTIEREN";
+}
+
+.onclic {
+    width: 40px;
+    border-color: #bbbbbb;
+    border-width: 3px;
+    font-size: 0;
+    border-left-color: #ff8d2f;
+    -webkit-animation: rotating 2s 0.25s linear infinite;
+    animation: rotating 2s 0.25s linear infinite;
+}
+
+.onclic:after {
+    content: "";
+}
+
+.onclic:hover {
+    color: #ff8d2f;
+    background: white;
+}
+
+.validate {
+    font-size: 13px;
+    color: white;
+    background: #ff8d2f;
+}
+
+.validate:after {
+    font-family: 'FontAwesome';
+    content: "\f00c";
+}
+
+@-webkit-keyframes rotating {
+    from {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotating {
+    from {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+
+/*# sourceMappingURL=input.css.map */
+
+#scrollTop{
+    position: fixed;
+    bottom: 0;
+    left: calc(50% - 1.5vw);
+    opacity: 0;
+    width: 4vw;
+    padding: 1vw;
+    height: auto;
+}
+
+#scrollTop:hover{
+    cursor: pointer;
+}
