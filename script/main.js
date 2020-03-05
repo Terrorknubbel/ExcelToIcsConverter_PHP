@@ -465,28 +465,26 @@ function sendJSON() {
 
                     console.log("tmpString: " + tmpString);
                     document.body.innerHTML += tmpString;
-                    //document.getElementById("dynForm").submit();
-                    $.ajax({
-                        type: 'POST',
-                        url: $("#dynForm").attr("action"),
-                        data: $("#dynForm").serialize(), 
-                        xhrFields: {
-                            responseType: 'blob'
-                        },
-                        success: function (data) {
-                            var a = document.createElement('a');
-                            var binaryData = [];
-                            binaryData.push(data);
-                            var url = window.URL.createObjectURL(new Blob(binaryData, {type: "application/zip"}))
-                            a.href = url;
-                            a.download = fileName;
-                            document.body.append(a);
-                            a.click();
-                            a.remove();
-                            window.URL.revokeObjectURL(url);
-                            alert("your file has downloaded");
-                        }
-                      });
+                    document.getElementById("dynForm").submit();
+                    // $.ajax({
+                    //     type: 'POST',
+                    //     url: $("#dynForm").attr("action"),
+                    //     data: $("#dynForm").serialize(), 
+                    //     xhrFields: {
+                    //         responseType: 'blob'
+                    //     },
+                    //     success: function (data) {
+                    //         var a = document.createElement('a');
+                    //         var url = window.URL.createObjectURL(data);
+                    //         a.href = url;
+                    //         a.download = fileName;
+                    //         document.body.append(a);
+                    //         a.click();
+                    //         a.remove();
+                    //         window.URL.revokeObjectURL(url);
+                    //         alert("your file has downloaded");
+                    //     }
+                    //   });
 
                     var elem = document.getElementById('dynForm');
                     elem.parentNode.removeChild(elem);
