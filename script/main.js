@@ -475,7 +475,9 @@ function sendJSON() {
                         },
                         success: function (data) {
                             var a = document.createElement('a');
-                            var url = window.URL.createObjectURL(data);
+                            var binaryData = [];
+                            binaryData.push(data);
+                            var url = window.URL.createObjectURL(new Blob(binaryData, {type: "application/zip"}))
                             a.href = url;
                             a.download = fileName;
                             document.body.append(a);
